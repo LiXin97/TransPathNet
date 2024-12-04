@@ -1,5 +1,15 @@
 # TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction
 
+<p align="center" width="100%">
+    <img width="22%" src="./logo.webp">
+</p>
+
+--------
+<p align="center">
+	<a href="https://lixin.ai/TransPathNet/"><img src="https://img.shields.io/badge/TransPathNet-ProjectPage-green.svg"></a>
+     <a href="http://...."><img src="https://img.shields.io/badge/TransPathNet-Paper-yellow.svg"></a>
+</p>
+
 This repository contains the implementation of **TransPathNet**, a novel two-stage deep learning framework designed for the **Indoor Pathloss Radio Map Challenge**. **TransPathNet** integrates the [TransNeXt](https://github.com/DaiShiResearch/TransNeXt) model as the backbone and the [EMCAD](https://github.com/SLDGroup/EMCAD) module as the head, alongside custom modifications to excel in the competition tasks. The network is built to predict radio pathloss in challenging indoor environments while generalizing to unseen geometries, frequencies, and antenna patterns.
 
 ## Competition Tasks
