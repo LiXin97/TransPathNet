@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media -->
+  <meta name="description" content="Accurate indoor pathloss prediction framework utilizing deep learning and transformers.">
+  <meta property="og:title" content="TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction"/>
+  <meta property="og:description" content="Learn about TransPathNet, a state-of-the-art model for indoor radio map prediction using transformer-based feature extraction."/>
+  <meta property="og:url" content="https://github.com/LiXin97/TransPathNet"/>
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:title" content="TransPathNet: Indoor Radio Map Prediction"/>
+  <meta name="twitter:description" content="Introducing TransPathNet, a two-stage deep learning framework for indoor radio map prediction."/>
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Deep Learning, Transformer, Pathloss Prediction, Indoor Radio Map, ICASSP 2025">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TransPathNet: Indoor Radio Map Prediction</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://lixin.ai/" target="_blank">Xin Li</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=o1t8iDAAAAAJ&hl=en" target="_blank">Ran Liu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://ieeexplore.ieee.org/author/37085616601" target="_blank">Saihua Xu</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=INHCtS0AAAAJ&hl=en" target="_blank">Sirajudeen Gulam Razul</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://blogs.ntu.edu.sg/chau-yuen/" target="_blank">Chau Yuen</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup> School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore<br>
+                <sup>2</sup> Temasek Laboratories @ NTU, Nanyang Technological University, Singapore
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://github.com/LiXin97/TransPathNet" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/LiXin97/TransPathNet" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Accurate indoor pathloss prediction is crucial for optimizing wireless communication in complex environments. This paper introduces TransPathNet, a two-stage deep learning framework that utilizes a transformer-based feature extraction backbone and a multiscale convolutional attention decoder. Demonstrating state-of-the-art performance in the ICASSP 2025 Indoor Pathloss Radio Map Prediction Challenge, TransPathNet achieves an overall Root Mean Squared Error (RMSE) of 10.397 on the challenge test set, demonstrating superior generalization across varied indoor geometries, frequencies, and antenna patterns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Overview of the paper -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-half">
+          <img src="static/images/overview.svg" width="100%" alt="Overview of TransPathNet Training Process">
+          <h2 class="subtitle has-text-centered is-size-6">
+            <strong>Overview of TransPathNet Training Process.</strong> The framework employs a two-stage architecture: a coarse stage and a fine stage. TransPathNet, utilized in both stages, integrates the TransNext and EMCAD to produce robust pathloss predictions.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End overview of the paper -->
+
+  <!-- Visual comparison section -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-fifths">
+          <img src="static/images/visual.svg" width="100%" alt="Pathloss Prediction Comparison">
+          <h2 class="subtitle has-text-centered is-size-6">
+            Comparison of pathloss predictions under different configurations.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End visual comparison section -->
+
+  <!-- BibTeX citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{li2025transpathnet,
+  title={TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction},
+  author={Xin Li and Ran Liu and Saihua Xu and Sirajudeen Gulam Razul and Chau Yuen},
+  <!-- booktitle={ICASSP 2025 - IEEE International Conference on Acoustics, Speech, and Signal Processing}, -->
+  <!-- year={2025}, -->
+  <!-- organization={IEEE} -->
+}</code></pre>
+    </div>
+  </section>
+  <!-- End BibTeX citation -->
+
+</body>
+</html>
