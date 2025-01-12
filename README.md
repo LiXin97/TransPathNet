@@ -72,4 +72,4 @@ If you find this work useful, please cite our paper:
 
 ## Contact
 
-For any questions, please contact [li-x@ntu.edu.sg](mailto:li-x@ntu.edu.sg).
+For any questions, please contact [xin019@e.ntu.edu.sg](mailto:xin019@e.ntu.edu.sg).
