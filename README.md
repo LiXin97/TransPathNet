@@ -64,9 +64,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 If you find this work useful, please cite our paper:
 
 ```bibtex
-@inproceedings{transpathnet2024,
+@inproceedings{li2025transpathnet,
   title={TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction},
   author={Li, Xin and Liu, Ran and Xu, Saihua and Razul, Sirajudeen Gulam and Yuen, Chau},
+  booktitle={Proc. IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},
+  year={2025},
+  month={April}
 }
 ```
 
