@@ -65,7 +65,7 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://github.com/LiXin97/TransPathNet" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/pdf/2501.16023" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -141,16 +141,37 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{li2025transpathnet,
+      <div class="bibtex-container" style="position: relative;">
+        <pre><code>@inproceedings{li2025transpathnet,
   title={TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction},
   author={Li, Xin and Liu, Ran and Xu, Saihua and Razul, Sirajudeen Gulam and Yuen, Chau},
   booktitle={Proc. IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},
   year={2025},
   month={April}
 }</code></pre>
+        <button class="button is-small is-light copy-button" style="position: absolute; top: 10px; right: 10px;" onclick="copyBibtex()">
+          <span class="icon">
+            <i class="fas fa-copy"></i>
+          </span>
+          <span>Copy</span>
+        </button>
+      </div>
     </div>
   </section>
   <!-- End BibTeX citation -->
 
+  <script>
+    function copyBibtex() {
+      const bibtexText = document.querySelector('#BibTeX pre code').textContent;
+      navigator.clipboard.writeText(bibtexText).then(() => {
+        const copyButton = document.querySelector('.copy-button');
+        const originalText = copyButton.innerHTML;
+        copyButton.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span><span>Copied!</span>';
+        setTimeout(() => {
+          copyButton.innerHTML = originalText;
+        }, 2000);
+      });
+    }
+  </script>
 </body>
 </html>
