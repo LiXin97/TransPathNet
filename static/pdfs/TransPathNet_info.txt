@@ -1,0 +1,5 @@
+Please add your final version of the TransPathNet paper here as "TransPathNet.pdf".
+
+This file will be linked from the homepage as the official ICASSP 2025 version of your paper.
+
+The website is currently linking to this file at: static/pdfs/TransPathNet.pdf 

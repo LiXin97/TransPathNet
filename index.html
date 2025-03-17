@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media -->
-  <meta name="description" content="Accurate indoor pathloss prediction framework utilizing deep learning and transformers.">
+  <meta name="description" content="TransPathNet: Winner of ICASSP 2025 Indoor Pathloss Radio Map Prediction Challenge">
   <meta property="og:title" content="TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction"/>
   <meta property="og:description" content="Learn about TransPathNet, a state-of-the-art model for indoor radio map prediction using transformer-based feature extraction."/>
-  <meta property="og:url" content="https://github.com/LiXin97/TransPathNet"/>
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:url" content="https://lixin.ai/TransPathNet"/>
+  <meta property="og:image" content="static/images/overview.webp" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <meta name="twitter:title" content="TransPathNet: Indoor Radio Map Prediction"/>
   <meta name="twitter:description" content="Introducing TransPathNet, a two-stage deep learning framework for indoor radio map prediction."/>
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:image" content="static/images/overview.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords" content="Deep Learning, Transformer, Pathloss Prediction, Indoor Radio Map, ICASSP 2025">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>TransPathNet: Indoor Radio Map Prediction</title>
+  <title>TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction</title>
   <link rel="icon" type="image/x-icon" href="static/images/icon.webp">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -27,6 +27,99 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
+  <style>
+    .hero.has-bg-img {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('static/images/carousel1.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .publication-title {
+      color: white !important;
+      font-weight: 600;
+    }
+    .author-block a {
+      color: #3de0e0 !important;
+    }
+    .hero-body {
+      padding: 3rem 1.5rem;
+    }
+    .section {
+      padding: 3rem 1.5rem;
+    }
+    .feature-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 6px;
+      box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 1em 2em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+    }
+    .feature-card .card-image {
+      padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+    .feature-card .card-content {
+      flex-grow: 1;
+      padding: 1.5rem;
+    }
+    .feature-card .title {
+      margin-bottom: 1rem;
+    }
+    .feature-icon {
+      height: 80px;
+      width: 80px;
+      margin: 0 auto 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #3273dc;
+      background-color: rgba(50, 115, 220, 0.1);
+      border-radius: 50%;
+    }
+    .award-badge {
+      background-color: #ffdd57;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: bold;
+      padding: 0.25rem 1rem;
+      border-radius: 290486px;
+      margin-left: 0.5rem;
+      white-space: nowrap;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.is-active {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .result-table {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .result-table td, .result-table th {
+      text-align: center;
+    }
+    .image-caption {
+      font-size: 0.9rem;
+      color: #4a4a4a;
+      text-align: center;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+    .tabs-container {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -35,13 +128,24 @@
   <script src="static/js/index.js"></script>
 </head>
 <body>
-  <section class="hero">
+  <!-- Hero section with background image -->
+  <section class="hero is-medium has-bg-img">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction</h1>
-            <div class="is-size-5 publication-authors">
+            <div class="is-flex is-justify-content-center is-align-items-center">
+              <h1 class="title is-1 publication-title">TransPathNet</h1>
+              <span class="award-badge">
+                <span class="icon">
+                  <i class="fas fa-trophy"></i>
+                </span>
+                ICASSP 2025 Challenge Winner
+              </span>
+            </div>
+            <h2 class="subtitle is-3" style="color: rgb(255, 255, 255); margin-top: 0.5rem;">A Novel Two-Stage Framework for Indoor Radio Map Prediction</h2>
+            
+            <div class="is-size-5 publication-authors" style="margin-top: 2rem;">
               <span class="author-block">
                 <a href="https://lixin.ai/" target="_blank">Xin Li</a><sup>1</sup>,</span>
               <span class="author-block">
@@ -55,17 +159,17 @@
               </span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-6 publication-authors" style="margin-top: 1rem;">
               <span class="author-block">
                 <sup>1</sup> School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore<br>
                 <sup>2</sup> Temasek Laboratories @ NTU, Nanyang Technological University, Singapore
               </span>
             </div>
 
-            <div class="column has-text-centered">
+            <div class="column has-text-centered" style="margin-top: 2rem;">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2501.16023" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/pdf/2501.16023" target="_blank" class="external-link button is-normal is-rounded is-info">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -80,6 +184,14 @@
                     <span>Code</span>
                   </a>
                 </span>
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/TransPathNet.pdf" target="_blank" class="external-link button is-normal is-rounded is-primary">
+                    <span class="icon">
+                      <i class="fas fa-award"></i>
+                    </span>
+                    <span>ICASSP 2025</span>
+                  </a>
+                </span> -->
               </div>
             </div>
           </div>
@@ -89,16 +201,16 @@
   </section>
 
   <!-- Paper abstract -->
-  <section class="section hero is-light">
+  <section class="section">
     <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
+      <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-3 has-text-centered">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              The accurate indoor pathloss prediction is crucial for optimizing wireless communication in complex environments. 
+              Accurate indoor pathloss prediction is crucial for optimizing wireless communication in indoor settings, where diverse materials and complex electromagnetic interactions pose significant modeling challenges.
               This paper introduces TransPathNet, a novel two-stage deep learning framework that leverages transformer-based feature extraction and multiscale convolutional attention decoding to generate high-precision indoor radio pathloss maps. 
-              TransPathNet demonstrates state-of-the-art performance in the ICASSP 2025 Indoor Path Loss Radio Map Prediction Challenge, achieving an overall Root Mean Squared Error (RMSE) of 10.397 on the challenge full test set and 9.73 on the challenge kaggle test set, showing excellent generalization capabilities across different indoor geometries, frequencies, and antenna patterns.
+              TransPathNet demonstrates state-of-the-art performance in the ICASSP 2025 Indoor Pathloss Radio Map Prediction Challenge, achieving an overall Root Mean Squared Error (RMSE) of 10.397 dB on the challenge full test set and 9.73 dB on the challenge Kaggle test set, showing excellent generalization capabilities across different indoor geometries, frequencies, and antenna patterns.
             </p>
           </div>
         </div>
@@ -107,41 +219,268 @@
   </section>
   <!-- End paper abstract -->
 
-  <!-- Overview of the paper -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-half">
-          <img src="static/images/overview.svg" width="100%" alt="Overview of TransPathNet Training Process">
-          <h2 class="subtitle has-text-centered is-size-6">
-            <strong>Overview of TransPathNet Training Process.</strong> The framework employs a two-stage architecture: a coarse stage and a fine stage. TransPathNet, utilized in both stages, integrates the TransNext and EMCAD to produce robust pathloss predictions.
-          </h2>
+  <!-- Method overview section with tabs -->
+  <section class="section has-background-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Our Approach</h2>
+      
+      <div class="tabs is-centered tabs-container">
+        <ul>
+          <li class="is-active" data-tab="architecture"><a>Architecture</a></li>
+          <li data-tab="features"><a>Features</a></li>
+          <li data-tab="training"><a>Training Strategy</a></li>
+          <li data-tab="results"><a>Results</a></li>
+        </ul>
+      </div>
+      
+      <!-- Architecture Tab -->
+      <div id="architecture" class="tab-content is-active">
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="box">
+              <div class="columns is-centered">
+                <div class="column is-8">
+                  <img src="static/images/overview.svg" width="100%" alt="Overview of TransPathNet Training Process">
+                  <p class="image-caption">
+                    <strong>Fig 1:</strong> Overview of TransPathNet training process. The framework employs a two-stage architecture: a coarse stage and a fine stage.
+                  </p>
+                </div>
+              </div>
+              <div class="content has-text-justified" style="margin-top: 1rem;">
+                <p>
+                  TransPathNet follows a U-Net-like architecture with a transformer-based encoder and multi-scale convolutional attention-based decoder. The encoder is based on <strong>TransNeXt</strong>, a state-of-the-art backbone that extracts hierarchical features from complex environmental data. We incorporate the <strong>Efficient Multiscale Convolutional Attention Decoder (EMCAD)</strong>, which refines and reconstructs pathloss maps at multiple scales through an attention mechanism.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Features Tab -->
+      <div id="features" class="tab-content">
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="box">
+              <div class="content has-text-justified">
+                <p>
+                  To capture the complexity of indoor propagation, TransPathNet extends the default three-channel inputs (reflectance, transmittance, distance) with enhanced features:
+                </p>
+                <ul>
+                  <li><strong>Free Space PathLoss (FSPL):</strong> Precomputed free-space pathloss estimate</li>
+                  <li><strong>Transmission Ray Encoding:</strong> Precomputed direct transmissions that highlight multi-path effects</li>
+                  <li><strong>Antenna Embeddings:</strong> Encodes both the antenna's pattern and angle information</li>
+                  <li><strong>Spatial-Frequency Embeddings:</strong> Combines positional encoding and frequency embedding</li>
+                </ul>
+                <p>
+                  These additional channels collectively aid the model in generalizing to diverse indoor layouts, materials, and operating conditions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Training Strategy Tab -->
+      <div id="training" class="tab-content">
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="box">
+              <div class="content has-text-justified">
+                <p>
+                  Our system employs a two-stage coarse-to-fine training strategy to achieve high-precision prediction results:
+                </p>
+                <ol>
+                  <li><strong>Coarse Stage:</strong> Generates a rough approximation of the pathloss map</li>
+                  <li><strong>Fine Stage:</strong> The coarse result is concatenated with the input features and fed into the second refined model, which focuses on residual details</li>
+                </ol>
+                <p>
+                  <strong>Implementation Details:</strong> The model is implemented in PyTorch and trained using the Adam optimizer with an initial learning rate of 10<sup>-4</sup>, halved at 50% and 75% of training progress. Input features are resized to 384×384 across all training and evaluation sets. Random flips and rotations are applied to input features to improve generalizability. Mean Squared Error (MSE) loss is used for training. All experiments were conducted on an NVIDIA RTX 4090 GPU with a batch size of 4 for 30 epochs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Results Tab -->
+      <div id="results" class="tab-content">
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="box">
+              <div class="columns is-centered">
+                <div class="column is-8">
+                  <img src="static/images/visual.svg" width="100%" alt="Pathloss Prediction Comparison">
+                  <p class="image-caption">
+                    <strong>Fig 2:</strong> Visual comparison of pathloss predictions across different stages of our pipeline for a particular input.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="content has-text-justified" style="margin-top: 1.5rem;">
+                <p>
+                  RMSE in dB is the main metric for evaluating the model. The test dataset is divided into three tasks, each of which aims to evaluate the adaptability of the model to new (1) geometric environments, (2) frequencies, and (3) antenna patterns, with weights of 30%, 30%, and 40%, respectively.
+                </p>
+                
+                <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth result-table">
+                  <thead>
+                    <tr>
+                      <th>Case</th>
+                      <th>Two-Stage</th>
+                      <th>Post-Process</th>
+                      <th>RMSE(dB): Kaggle</th>
+                      <th>RMSE(dB): Full</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Coarse only</td>
+                      <td>✗</td>
+                      <td>✗</td>
+                      <td>9.93</td>
+                      <td>10.327</td>
+                    </tr>
+                    <tr>
+                      <td>+ Two-Stage Training</td>
+                      <td>✓</td>
+                      <td>✗</td>
+                      <td>9.75</td>
+                      <td>10.430</td>
+                    </tr>
+                    <tr>
+                      <td>Full pipeline</td>
+                      <td>✓</td>
+                      <td>✓</td>
+                      <td><strong>9.73</strong></td>
+                      <td><strong>10.397</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>The average inference time is about 43.8 ms per sample on the RTX 4090.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End overview of the paper -->
 
-  <!-- Visual comparison section -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-two-fifths">
-          <img src="static/images/visual.svg" width="100%" alt="Pathloss Prediction Comparison">
-          <h2 class="subtitle has-text-centered is-size-6">
-            Comparison of pathloss predictions under different configurations.
-          </h2>
+  <!-- Key Contributions with cards -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Key Contributions</h2>
+      
+      <div class="columns is-multiline">
+        <!-- Card 1 -->
+        <div class="column is-one-third">
+          <div class="feature-card">
+            <div class="card-image has-text-centered">
+              <div class="feature-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4 class="title is-4 has-text-centered">Two-Stage Architecture</h4>
+              <p class="has-text-centered">
+                Our coarse-to-fine training strategy enables high-precision prediction results by first generating a rough approximation and then refining details.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="column is-one-third">
+          <div class="feature-card">
+            <div class="card-image has-text-centered">
+              <div class="feature-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4 class="title is-4 has-text-centered">TransNeXt Encoder</h4>
+              <p class="has-text-centered">
+                State-of-the-art transformer-based backbone for robust feature extraction from complex environmental data.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="column is-one-third">
+          <div class="feature-card">
+            <div class="card-image has-text-centered">
+              <div class="feature-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4 class="title is-4 has-text-centered">EMCAD Decoder</h4>
+              <p class="has-text-centered">
+                Efficient Multiscale Convolutional Attention Decoder refines predictions at multiple scales through an attention mechanism.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="column is-half">
+          <div class="feature-card">
+            <div class="card-image has-text-centered">
+              <div class="feature-icon">
+                <i class="fas fa-database"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4 class="title is-4 has-text-centered">Enhanced Input Features</h4>
+              <p class="has-text-centered">
+                Comprehensive feature set including Free Space PathLoss, transmission ray encoding, antenna embeddings, and spatial-frequency embeddings.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 5 -->
+        <div class="column is-half">
+          <div class="feature-card">
+            <div class="card-image has-text-centered">
+              <div class="feature-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4 class="title is-4 has-text-centered">SOTA Performance</h4>
+              <p class="has-text-centered">
+                Winner of the ICASSP 2025 Indoor Pathloss Radio Map Prediction Challenge with state-of-the-art RMSE scores across different environments.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End visual comparison section -->
+
+  <!-- Conclusion section -->
+  <section class="section has-background-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Conclusion</h2>
+          <div class="content has-text-justified">
+            <p>
+              This paper presents TransPathNet, an advanced deep learning framework for indoor pathloss prediction that combines transformer-based feature extraction with multi-scale convolutional attention decoding.
+              Our model achieves state-of-the-art performance in the ICASSP 2025 Indoor Pathloss Radio Map Prediction Challenge, demonstrating robust generalization across different geometries, frequencies, and antenna patterns.
+              However, it is still difficult to predict high quality pathloss caused by reflections. Future work will focus on developing network designs to improve the accuracy of these predictions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- BibTeX citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <div class="bibtex-container" style="position: relative;">
+      <h2 class="title is-3 has-text-centered">BibTeX</h2>
+      <div class="box bibtex-container" style="position: relative; margin-top: 1rem;">
         <pre><code>@inproceedings{li2025transpathnet,
   title={TransPathNet: A Novel Two-Stage Framework for Indoor Radio Map Prediction},
   author={Li, Xin and Liu, Ran and Xu, Saihua and Razul, Sirajudeen Gulam and Yuen, Chau},
@@ -160,6 +499,90 @@
   </section>
   <!-- End BibTeX citation -->
 
+  <!-- Enhanced Footer -->
+  <footer class="footer has-background-dark">
+    <div class="container">
+      <div class="columns is-multiline">
+        <!-- Project Info Column -->
+        <div class="column is-4">
+          <h3 class="title is-4 has-text-white">TransPathNet</h3>
+          <p class="has-text-light" style="margin-bottom: 1rem;">
+            A Novel Two-Stage Framework for Indoor Radio Map Prediction
+          </p>
+          <div class="buttons are-small">
+            <a href="https://arxiv.org/pdf/2501.16023" class="button is-rounded is-info is-outlined">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Paper</span>
+            </a>
+            <a href="https://github.com/LiXin97/TransPathNet" class="button is-rounded is-light is-outlined">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Connect Column -->
+        <div class="column is-4">
+          <h3 class="title is-4 has-text-white">Connect</h3>
+          <div class="content">
+            <ul style="list-style: none; margin-left: 0; color: #b5b5b5;">
+              <li style="margin-bottom: 0.5rem;">
+                <span class="icon-text">
+                  <span class="icon has-text-info">
+                    <i class="fas fa-university"></i>
+                  </span>
+                  <span>Nanyang Technological University</span>
+                </span>
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <span class="icon-text">
+                  <span class="icon has-text-info">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span>xin019@e.ntu.edu.sg</span>
+                </span>
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <span class="icon-text">
+                  <span class="icon has-text-info">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                  <a href="https://lixin.ai/" class="has-text-light">https://lixin.ai/</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Acknowledgment Column -->
+        <div class="column is-4">
+          <h3 class="title is-4 has-text-white">Acknowledgments</h3>
+          <p class="has-text-light" style="margin-bottom: 1rem;">
+            This research is partially supported by the National Research Foundation, Singapore and Infocomm Media Development Authority under its Future Communications Research & Development Programme FCP-SUTD-TG-2022-010.
+          </p>
+          <div class="tags">
+            <span class="tag is-info is-light">#DeepLearning</span>
+            <span class="tag is-info is-light">#Transformer</span>
+            <span class="tag is-info is-light">#IndoorRadio</span>
+            <span class="tag is-info is-light">#ICASSP2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="content has-text-centered" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #484848;">
+        <p class="has-text-grey-light">
+          © 2025 TransPathNet | <a href="https://lixin.ai/TransPathNet/" class="has-text-grey-light">https://lixin.ai/TransPathNet/</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- End Enhanced Footer -->
+
   <script>
     function copyBibtex() {
       const bibtexText = document.querySelector('#BibTeX pre code').textContent;
@@ -172,6 +595,27 @@
         }, 2000);
       });
     }
+    
+    // Tab functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tabs li');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(item => {
+            item.classList.remove('is-active');
+          });
+          tabContents.forEach(content => {
+            content.classList.remove('is-active');
+          });
+          
+          tab.classList.add('is-active');
+          const tabId = tab.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('is-active');
+        });
+      });
+    });
   </script>
 </body>
 </html>
