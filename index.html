@@ -118,6 +118,212 @@
     .tabs-container {
       margin-bottom: 1.5rem;
     }
+    
+    /* Responsive improvements for mobile */
+    .hero-title-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .mobile-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    /* Responsive table */
+    .mobile-table {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Mobile authors handling */
+    .mobile-authors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    /* Buttons container for mobile */
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    /* Scrollable tabs for mobile */
+    .tabs.is-mobile-scrollable {
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      padding-bottom: 5px;
+    }
+    
+    .tabs.is-mobile-scrollable ul {
+      flex-wrap: nowrap;
+    }
+    
+    .tabs.is-mobile-scrollable::-webkit-scrollbar {
+      height: 4px;
+    }
+    
+    .tabs.is-mobile-scrollable::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    .tabs.is-mobile-scrollable::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .hero-title-container {
+        flex-direction: column;
+      }
+      
+      .award-badge {
+        margin-left: 0;
+        margin-top: 0.75rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+      
+      .publication-title {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+      
+      .subtitle.is-3 {
+        font-size: 1.5rem !important;
+        text-align: center;
+        margin-top: 1rem !important;
+      }
+      
+      .is-size-5.publication-authors {
+        font-size: 1rem !important;
+      }
+      
+      .is-size-6.publication-authors {
+        font-size: 0.85rem !important;
+      }
+      
+      .publication-links .button {
+        padding: 0.5rem 1rem;
+        height: auto;
+        margin: 0.25rem;
+      }
+      
+      .section {
+        padding: 2rem 1rem;
+      }
+      
+      .tab-content .box {
+        padding: 1rem;
+      }
+      
+      .hero.is-medium .hero-body {
+        padding: 6rem 1rem 3rem;
+      }
+      
+      .columns.is-multiline .column {
+        padding: 0.5rem;
+      }
+      
+      .feature-card {
+        padding: 0.5rem;
+      }
+      
+      .feature-icon {
+        height: 60px;
+        width: 60px;
+        font-size: 1.75rem;
+      }
+      
+      .author-block {
+        display: inline-block;
+        margin-bottom: 0.25rem;
+      }
+      
+      .footer .column {
+        padding: 0.75rem;
+      }
+      
+      /* Mobile table styles */
+      .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      /* Card layout adjustments for mobile */
+      .columns.is-multiline {
+        margin-left: -0.25rem;
+        margin-right: -0.25rem;
+      }
+      
+      .columns.is-multiline .column {
+        padding: 0.25rem;
+      }
+      
+      /* Mobile authors specific styling */
+      .mobile-authors .author-block {
+        margin-right: 0.3rem;
+      }
+      
+      /* Adjusted buttons for mobile */
+      .buttons-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .buttons-container .link-block {
+        margin: 0.25rem;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .publication-title {
+        font-size: 2rem !important;
+      }
+      
+      .subtitle.is-3 {
+        font-size: 1.25rem !important;
+      }
+      
+      .is-size-5.publication-authors {
+        font-size: 0.9rem !important;
+      }
+      
+      .tabs li a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
+      
+      .feature-card .card-content {
+        padding: 1rem;
+      }
+      
+      .feature-card .title.is-4 {
+        font-size: 1.25rem !important;
+      }
+      
+      /* Extra small device optimizations */
+      .hero-body {
+        padding-top: 4rem !important;
+        padding-bottom: 2rem !important;
+      }
+      
+      .mobile-authors {
+        line-height: 1.8;
+      }
+    }
   </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -134,7 +340,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="is-flex is-justify-content-center is-align-items-center">
+            <div class="hero-title-container">
               <h1 class="title is-1 publication-title">TransPathNet</h1>
               <span class="award-badge">
                 <span class="icon">
@@ -145,7 +351,7 @@
             </div>
             <h2 class="subtitle is-3" style="color: rgb(255, 255, 255); margin-top: 0.5rem;">A Novel Two-Stage Framework for Indoor Radio Map Prediction</h2>
             
-            <div class="is-size-5 publication-authors" style="margin-top: 2rem;">
+            <div class="is-size-5 publication-authors mobile-authors" style="margin-top: 2rem;">
               <span class="author-block">
                 <a href="https://lixin.ai/" target="_blank">Xin Li</a><sup>1</sup>,</span>
               <span class="author-block">
@@ -167,7 +373,7 @@
             </div>
 
             <div class="column has-text-centered" style="margin-top: 2rem;">
-              <div class="publication-links">
+              <div class="publication-links buttons-container">
                 <span class="link-block">
                   <a href="https://arxiv.org/pdf/2501.16023" target="_blank" class="external-link button is-normal is-rounded is-info">
                     <span class="icon">
@@ -224,7 +430,7 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Our Approach</h2>
       
-      <div class="tabs is-centered tabs-container">
+      <div class="tabs is-centered tabs-container is-mobile-scrollable">
         <ul>
           <li class="is-active" data-tab="architecture"><a>Architecture</a></li>
           <li data-tab="features"><a>Features</a></li>
@@ -321,40 +527,42 @@
                   RMSE in dB is the main metric for evaluating the model. The test dataset is divided into three tasks, each of which aims to evaluate the adaptability of the model to new (1) geometric environments, (2) frequencies, and (3) antenna patterns, with weights of 30%, 30%, and 40%, respectively.
                 </p>
                 
-                <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth result-table">
-                  <thead>
-                    <tr>
-                      <th>Case</th>
-                      <th>Two-Stage</th>
-                      <th>Post-Process</th>
-                      <th>RMSE(dB): Kaggle</th>
-                      <th>RMSE(dB): Full</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Coarse only</td>
-                      <td>✗</td>
-                      <td>✗</td>
-                      <td>9.93</td>
-                      <td>10.327</td>
-                    </tr>
-                    <tr>
-                      <td>+ Two-Stage Training</td>
-                      <td>✓</td>
-                      <td>✗</td>
-                      <td>9.75</td>
-                      <td>10.430</td>
-                    </tr>
-                    <tr>
-                      <td>Full pipeline</td>
-                      <td>✓</td>
-                      <td>✓</td>
-                      <td><strong>9.73</strong></td>
-                      <td><strong>10.397</strong></td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-container">
+                  <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth result-table">
+                    <thead>
+                      <tr>
+                        <th>Case</th>
+                        <th>Two-Stage</th>
+                        <th>Post-Process</th>
+                        <th>RMSE(dB): Kaggle</th>
+                        <th>RMSE(dB): Full</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Coarse only</td>
+                        <td>✗</td>
+                        <td>✗</td>
+                        <td>9.93</td>
+                        <td>10.327</td>
+                      </tr>
+                      <tr>
+                        <td>+ Two-Stage Training</td>
+                        <td>✓</td>
+                        <td>✗</td>
+                        <td>9.75</td>
+                        <td>10.430</td>
+                      </tr>
+                      <tr>
+                        <td>Full pipeline</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td><strong>9.73</strong></td>
+                        <td><strong>10.397</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
                 <p>The average inference time is about 43.8 ms per sample on the RTX 4090.</p>
               </div>
             </div>
